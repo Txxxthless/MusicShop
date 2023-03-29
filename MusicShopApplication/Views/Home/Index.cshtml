@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if(User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome to the MusicShop!</h1>
+    </div>
+}
+else
+{
+    <div class="card text-black" style="border-radius : 25px; height: contain; padding-bottom: 50px;">
+    <h1 class="text-center h1 mb-5 mt-4">You are nor authorised!</h1>
+        <p class="text-center mb-5 mt-4" style="font-size: 200%;">Create your account or sing in first</p>
+    </div>
+}
