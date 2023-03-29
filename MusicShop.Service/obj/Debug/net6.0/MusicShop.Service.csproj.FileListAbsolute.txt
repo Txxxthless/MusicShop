@@ -1,0 +1,17 @@
+D:\CS Projects\MusicShop\MusicShop.Service\bin\Debug\net6.0\MusicShop.Service.deps.json
+D:\CS Projects\MusicShop\MusicShop.Service\bin\Debug\net6.0\MusicShop.Service.dll
+D:\CS Projects\MusicShop\MusicShop.Service\bin\Debug\net6.0\MusicShop.Service.pdb
+D:\CS Projects\MusicShop\MusicShop.Service\bin\Debug\net6.0\MusicShop.DAL.dll
+D:\CS Projects\MusicShop\MusicShop.Service\bin\Debug\net6.0\MusicShop.Domain.dll
+D:\CS Projects\MusicShop\MusicShop.Service\bin\Debug\net6.0\MusicShop.DAL.pdb
+D:\CS Projects\MusicShop\MusicShop.Service\bin\Debug\net6.0\MusicShop.Domain.pdb
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.csproj.AssemblyReference.cache
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.AssemblyInfoInputs.cache
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.AssemblyInfo.cs
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.csproj.CoreCompileInputs.cache
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.csproj.CopyComplete
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.dll
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\refint\MusicShop.Service.dll
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\MusicShop.Service.pdb
+D:\CS Projects\MusicShop\MusicShop.Service\obj\Debug\net6.0\ref\MusicShop.Service.dll
