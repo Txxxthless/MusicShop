@@ -13,7 +13,7 @@ namespace MusicShop.Domain.ViewModels
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Enter password!")]
         [MinLength(5, ErrorMessage = "Min password length is 5!")]
-        [MaxLength(30, ErrorMessage = "Max password length is 5!")]
+        [MaxLength(30, ErrorMessage = "Max password length is 30!")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
