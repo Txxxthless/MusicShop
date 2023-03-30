@@ -1,0 +1,28 @@
+﻿@using MusicShop.Domain.Entity
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Keyboards";
+}
+
+<div class="card text-black" style="border-radius : 25px; height: contain; padding: 50px;">
+    <h1>Keyboards</h1>
+    @if (Model.Count != 0)
+    {
+        <div class="card text-black" style="border-radius : 25px; height: contain; padding: 50px;">
+            @{
+                foreach (Product product in Model)
+                {
+                    <h2>@product.Manufacturer</h2>
+                    <p>@product.Model</p>
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Image)" style="width: 400px; height: 400px;" />
+                }
+            }
+        </div>
+    }
+    else
+    {
+        <h2>Sorry, there are no products in this category at the moment!</h2>
+    }
+</div>
+
