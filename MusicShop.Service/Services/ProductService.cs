@@ -42,9 +42,29 @@ namespace MusicShop.Service.Services
             }
         }
 
-        public Task<DataBaseResponse<Product>> DeleteProduct(int id)
+        public async Task<DataBaseResponse<Product>> DeleteProduct(int id)
         {
-            throw new NotImplementedException();
+            DataBaseResponse<Product> response = new DataBaseResponse<Product>();
+            try
+            {
+                Product product = await _productsRepository.GetAll().FirstOrDefaultAsync(product => product.Id == id);
+                
+                if (product != null)
+                {
+                    await _productsRepository.Delete(product);
+                    response.Status = StatusCode.OK;
+                    return response;
+                }
+
+                response.Status = StatusCode.ProductNotFound;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.Description = ex.Message;
+                response.Status = StatusCode.InternalServerError;
+                return response;
+            }
         }
 
         public async Task<DataBaseResponse<List<Product>>> GetAllProducts()
@@ -65,9 +85,29 @@ namespace MusicShop.Service.Services
             }
         }
 
-        public Task<DataBaseResponse<Product>> GetProduct(int id)
+        public async Task<DataBaseResponse<Product>> GetProduct(int id)
         {
-            throw new NotImplementedException();
+            DataBaseResponse<Product> response = new DataBaseResponse<Product>();
+            try
+            {
+                Product product = await _productsRepository.GetAll().FirstOrDefaultAsync(product => product.Id == id);
+
+                if (product != null)
+                {
+                    response.Data = product;
+                    response.Status = StatusCode.OK;
+                    return response;
+                }
+
+                response.Status = StatusCode.ProductNotFound;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.Description = ex.Message;
+                response.Status = StatusCode.InternalServerError;
+                return response;
+            }
         }
 
         public async Task<DataBaseResponse<List<Product>>> GetProductsByType(InstrumentType type)
