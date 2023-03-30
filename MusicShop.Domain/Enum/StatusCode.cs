@@ -6,6 +6,8 @@ namespace MusicShop.Domain.Enum
         UserNotFound = 0,
         UserAlreadyExists = 1,
 
+        ProductNotFound = 10,
+
         OK = 200,
         InternalServerError = 500
     }
