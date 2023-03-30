@@ -25,8 +25,12 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddDbContext<ApplicationDataBaseContext>(options => options.UseSqlServer(connectionString));
 //add user repo
 builder.Services.AddScoped<IRepository<User>, UserRepository>();
+//add prod repo
+builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 //add user service
 builder.Services.AddScoped<IAccountService, AccountService>();
+//add prod service
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 
