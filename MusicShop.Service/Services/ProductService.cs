@@ -1,5 +1,4 @@
-﻿using Azure;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MusicShop.DAL.Interfaces;
 using MusicShop.Domain.Entity;
 using MusicShop.Domain.Enum;
