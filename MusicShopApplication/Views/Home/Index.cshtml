@@ -6,9 +6,19 @@
 {
     <div class="card text-black" style="border-radius : 25px; height: contain; padding: 50px;">
         <h1>Wellcome to the MusicShop!</h1>
-        <img src="https://cdn.shopify.com/s/files/1/0612/6200/4377/files/073120ps-17.jpg?v=1654188937&width=1500">
-        <a asp-controller="Products" asp-action="Index" class="btn btn-primary btn-lg" style="margin: 50px;">See the products</a>
-        <a asp-controller="Home" asp-action="Contacts" class="btn btn-primary btn-lg" style="margin: 50px;">Information about the shop</a>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="https://cdn.shopify.com/s/files/1/0612/6200/4377/files/073120ps-17.jpg?v=1654188937&width=1500" class="img-fluid">
+            </div>
+            <div class="col-md-6 col-sm-12" style="padding: 50px;">
+                <div>
+                    <a asp-controller="Products" asp-action="Index" class="btn btn-primary btn-lg" style="width: 100%;">See the products</a>
+                </div>
+                <div>                
+                    <a asp-controller="Home" asp-action="Contacts" class="btn btn-primary btn-lg" style="margin-top: 50px; width: 100%;">Information about the shop</a>
+                </div>
+            </div>
+        </div>
     </div>
 }
 else

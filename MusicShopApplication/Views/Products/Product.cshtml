@@ -15,9 +15,11 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <h2>@Model.Manufacturer</h2>
+                    <hr />
                     <p>@Model.Model</p>
                     <p>Description: @Model.Description</p>
                     <p>Instrument type: @Model.Type</p>
+                    <hr />
                     <a asp-controller="Basket" asp-action="AddItem" asp-route-id="@Model.Id" class="btn btn-primary btn-lg;">Add to basket</a>
                 </div>
             </div>

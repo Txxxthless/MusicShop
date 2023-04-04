@@ -25,6 +25,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark headerButton" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                         </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark headerButton" asp-area="" asp-controller="Admin" asp-action="Users">Admin</a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <form class="nav-link text-dark headerButton" asp-area="" asp-controller="Account" asp-action="Logout" style="background-color:white;">
                                 <button style="border: 0px; background-color: white; color: red;" type="submit">Logout</button>
