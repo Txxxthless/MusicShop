@@ -27,10 +27,12 @@ builder.Services.AddDbContext<ApplicationDataBaseContext>(options => options.Use
 builder.Services.AddScoped<IRepository<User>, UserRepository>();
 //add prod repo
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
-//add user service
+//add account service
 builder.Services.AddScoped<IAccountService, AccountService>();
 //add prod service
 builder.Services.AddScoped<IProductService, ProductService>();
+//add user service
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
