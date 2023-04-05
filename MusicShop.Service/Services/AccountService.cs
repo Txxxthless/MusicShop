@@ -13,9 +13,15 @@ namespace MusicShop.Service.Services
     public class AccountService : IAccountService
     {
         private readonly IRepository<User> _userRepository;
-        public AccountService(IRepository<User> userRepository)
+        private readonly IRepository<Basket> _basketRepository;
+        private readonly IRepository<Order> _orderRepository;
+        public AccountService(IRepository<User> userRepository, 
+            IRepository<Basket> basketRepository, 
+            IRepository<Order> orderRepository)
         {
             _userRepository = userRepository;
+            _basketRepository = basketRepository;
+            _orderRepository = orderRepository;
         }
 
         public async Task<DataBaseResponse<ClaimsIdentity>> Login(LoginViewModel viewModel)
@@ -74,6 +80,13 @@ namespace MusicShop.Service.Services
                 };
 
                 await _userRepository.Create(user);
+
+                Basket basket = new Basket()
+                {
+                    UserId = user.Id
+                };
+
+                await _basketRepository.Create(basket);
 
                 ClaimsIdentity result = Authenticate(user);
 
