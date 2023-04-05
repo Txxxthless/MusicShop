@@ -20,7 +20,9 @@
                     <p>Description: @Model.Description</p>
                     <p>Instrument type: @Model.Type</p>
                     <hr />
-                    <a asp-controller="Basket" asp-action="AddItem" asp-route-id="@Model.Id" class="btn btn-primary btn-lg;">Add to basket</a>
+                    <form asp-controller="Order" asp-action="CreateOrder" asp-route-id="@Model.Id">
+                        <button class="btn btn-primary btn-lg;" type="submit" style="width: 100%; margin-top: 15px;">Add to cart</button>
+                    </form>
                 </div>
             </div>
         </div>

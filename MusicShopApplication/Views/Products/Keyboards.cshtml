@@ -21,8 +21,10 @@
                             <div class="col-md-6 col-sm-12">
                                 <h2>@product.Manufacturer</h2>
                                 <p>@product.Model</p>
-                                <a asp-controller="Products" asp-action="Product" asp-route-id="@product.Id" class="btn btn-primary btn-lg;">See more</a>
-                                <a asp-controller="Basket" asp-action="AddItem" asp-route-id="@product.Id" class="btn btn-primary btn-lg;">Add to basket</a>
+                                <a asp-controller="Products" asp-action="Product" asp-route-id="@product.Id" class="btn btn-primary btn-lg;" style="width: 100%;">See more</a>
+                                <form asp-controller="Order" asp-action="CreateOrder" asp-route-id="@product.Id">
+                                    <button class="btn btn-primary btn-lg;" type="submit" style="width: 100%; margin-top: 15px;">Add to cart</button>
+                                </form>
                             </div>
                         </div>
                         <hr />

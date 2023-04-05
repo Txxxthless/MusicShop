@@ -79,17 +79,6 @@ namespace MusicShopApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-
-            //ProductViewModel guitar = new ProductViewModel()
-            //{
-            //    Manufacturer = "Fender",
-            //    Model = "Jaguar",
-            //    Description = "A very beautiful one",
-            //    Type = MusicShop.Domain.Enum.InstrumentType.String,
-            //    Image = System.IO.File.ReadAllBytes(@"D:\\CS Projects\\MusicShop\\Images\\jaguar.jpg")
-            //};
-            //await _productService.AddProduct(guitar);
-
             return RedirectToAction("Index", "Home");
         }
     }
