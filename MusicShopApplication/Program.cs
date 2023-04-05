@@ -6,6 +6,7 @@ using MusicShop.DAL.Repositories;
 using MusicShop.Domain.Entity;
 using MusicShop.Service.Interfaces;
 using MusicShop.Service.Services;
+using MusicShopApplication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,16 +24,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 //db register
 builder.Services.AddDbContext<ApplicationDataBaseContext>(options => options.UseSqlServer(connectionString));
-//add user repo
-builder.Services.AddScoped<IRepository<User>, UserRepository>();
-//add prod repo
-builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
-//add account service
-builder.Services.AddScoped<IAccountService, AccountService>();
-//add prod service
-builder.Services.AddScoped<IProductService, ProductService>();
-//add user service
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.ConfigureRepositories();
+builder.Services.ConfigureServices();
 
 var app = builder.Build();
 
