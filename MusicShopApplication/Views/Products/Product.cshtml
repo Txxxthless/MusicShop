@@ -19,6 +19,7 @@
                     <p>@Model.Model</p>
                     <p>Description: @Model.Description</p>
                     <p>Instrument type: @Model.Type</p>
+                    <h3>Price: @Model.Price $</h3>
                     <hr />
                     <form asp-controller="Order" asp-action="CreateOrder" asp-route-id="@Model.Id">
                         <button class="btn btn-primary btn-lg;" type="submit" style="width: 100%; margin-top: 15px;">Add to cart</button>

@@ -1,0 +1,39 @@
+﻿@using MusicShop.Domain.Enum
+@using MusicShop.Domain.ViewModels
+@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Product creation";
+}
+
+<div class="card text-black" style="border-radius : 25px; height: contain; padding-bottom: 50px;">
+    <p class="text-center h1 mb-5 mt-4">Product creation</p>
+    <form asp-controller="Admin" asp-action="CreateProduct" style="padding-left: 100px; padding-right: 100px" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger text-center"></div>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" style="margin-left: 0px;">Manufacturer</label>
+            <input asp-for="@Model.Manufacturer" autocomplete="off" type="text" class="form-control">
+        </div>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" style="margin-left: 0px;">Model</label>
+            <input asp-for="@Model.Model" autocomplete="off" type="text" class="form-control">
+        </div>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" style="margin-left: 0px;">Description</label>
+            <input asp-for="@Model.Description" autocomplete="off" type="text" class="form-control">
+        </div>
+        <div class="form-outline flex-fill mb-0">
+            <label class="form-label" style="margin-left: 0px;">Price</label>
+            <input asp-for="@Model.Price" autocomplete="off" type="number" class="form-control">
+        </div>
+        <div class="form-outline flex-fill mb-0">
+            <label class="col-form-label">Image</label>
+            <input asp-for="@Model.Avatar" id="productImage" class="form-control" type="file">
+        </div>
+        <div class="form-outline flex-fill mb-0">
+            <label class="col-form-label">Type</label>
+            <select asp-for="@Model.Type" class="form-control" asp-items="Html.GetEnumSelectList<InstrumentType>()" id="carType"></select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 50px;">Create</button>
+    </form>
+</div>

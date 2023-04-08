@@ -11,11 +11,11 @@
         <div asp-validation-summary="All" class="text-danger text-center"></div>
         <div class="form-outline flex-fill mb-0">
             <label class="form-label" style="margin-left: 0px;">Your Name</label>
-            <input asp-for="Name" type="text" class="form-control">
+            <input asp-for="Name" autocomplete="off" type="text" class="form-control">
         </div>
         <div class="form-outline flex-fill mb-0">
             <label class="form-label" style="margin-left: 0px;">Password</label>
-            <input asp-for="Password" type="password" class="form-control">
+            <input asp-for="Password" autocomplete="off" type="password" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 50px;">Login</button>
     </form>

@@ -76,10 +76,19 @@ namespace MusicShopApplication.Controllers
             return RedirectToAction("Index", "Products");
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Create()
+        [HttpPost]
+        public async Task<IActionResult> Search()
         {
-            return RedirectToAction("Index", "Home");
+            string requestedName = Request.Form["itemToSearch"];
+            if (requestedName != null)
+            {
+                DataBaseResponse<List<Product>> response = await _productService.Search(requestedName);
+                if (response.Status == MusicShop.Domain.Enum.StatusCode.OK)
+                {
+                    return View(response.Data);
+                }
+            }
+            return RedirectToAction("Error");
         }
     }
 }
