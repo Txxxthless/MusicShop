@@ -12,5 +12,6 @@ namespace MusicShop.Service.Interfaces
         Task<DataBaseResponse<List<Product>>> GetProductsByType(InstrumentType type);
         Task<DataBaseResponse<Product>> DeleteProduct(int id);
         Task<DataBaseResponse<Product>> AddProduct(ProductViewModel product);
+        Task<DataBaseResponse<List<Product>>> Search(string name);
     }
 }

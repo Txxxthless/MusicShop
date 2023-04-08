@@ -20,13 +20,19 @@ namespace MusicShop.Service.Services
             DataBaseResponse<Product> response = new DataBaseResponse<Product>();
             try
             {
+                byte[] image;
+                using (BinaryReader reader = new BinaryReader(product.Avatar.OpenReadStream()))
+                {
+                    image = reader.ReadBytes((int)product.Avatar.Length);
+                }
                 Product newProduct = new Product()
                 {
                     Description = product.Description,
-                    Image = product.Image,
+                    Image = image,
                     Manufacturer = product.Manufacturer,
                     Model = product.Model,
-                    Type = product.Type
+                    Type = product.Type,
+                    Price= product.Price
                 };
 
                 await _productsRepository.Create(newProduct);
@@ -118,6 +124,36 @@ namespace MusicShop.Service.Services
                                                     .Where(product => product.Type == type)
                                                     .ToListAsync<Product>();
                 response.Data = responseProducts;
+                response.Status = StatusCode.OK;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.Description = ex.Message;
+                response.Status = StatusCode.InternalServerError;
+                return response;
+            }
+        }
+
+        public async Task<DataBaseResponse<List<Product>>> Search(string name)
+        {
+            DataBaseResponse<List<Product>> response = new DataBaseResponse<List<Product>>();
+            try
+            {
+                List<Product> products = await _productsRepository.GetAll()
+                                                    .Where(product => product.Manufacturer.ToLower().Contains(name.ToLower())
+                                                                    || product.Model.ToLower().Contains(name.ToLower())
+                                                                    || product.Description.ToLower().Contains(name.ToLower()))
+                                                    .Select(product => product)
+                                                    .ToListAsync();
+
+                if (products == null)
+                {
+                    response.Status = StatusCode.ProductNotFound;
+                    return response;
+                }
+
+                response.Data = products;
                 response.Status = StatusCode.OK;
                 return response;
             }
