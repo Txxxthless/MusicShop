@@ -13,7 +13,6 @@ namespace MusicShop.Service.Services
         {
             _userRepository = userRepository;
         }
-
         public async Task<DataBaseResponse<List<User>>> GetUsers()
         {
             DataBaseResponse<List<User>> response = new DataBaseResponse<List<User>>();
