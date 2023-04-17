@@ -11,6 +11,7 @@ namespace MusicShop.DAL
         public DbSet<Product> Products { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         public ApplicationDataBaseContext(DbContextOptions<ApplicationDataBaseContext> options) 
             : base(options)
