@@ -14,6 +14,7 @@ namespace MusicShopApplication
             services.AddScoped<IRepository<Product>, ProductRepository>();
             services.AddScoped<IRepository<Basket>, BasketRepository>();
             services.AddScoped<IRepository<Order>, OrderRepository>();
+            services.AddScoped<IRepository<Comment>, CommentRepository>();
         }
 
         public static void ConfigureServices(this IServiceCollection services)
@@ -23,6 +24,7 @@ namespace MusicShopApplication
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IBasketService, BasketService>();
+            services.AddScoped<ICommentService, CommentService>();
         }
     }
 }

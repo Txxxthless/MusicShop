@@ -1,15 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MusicShop.Domain.Entity;
 using MusicShop.Service.Interfaces;
+using System.Dynamic;
 
 namespace MusicShopApplication.Controllers
 {
     public class ProductsController : Controller
     {
         private readonly IProductService _productService;
-        public ProductsController(IProductService productService)
+        private readonly ICommentService _commentService;
+        public ProductsController(
+            IProductService productService
+            , ICommentService commentService)
         {
             _productService = productService;
+            _commentService = commentService;
         }
 
         [HttpGet]
@@ -21,10 +26,15 @@ namespace MusicShopApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> Product(int id)
         {
-            var response = await _productService.GetProduct(id);
-            if (response.Status == MusicShop.Domain.Enum.StatusCode.OK)
+            dynamic data = new ExpandoObject();
+            DataBaseResponse<Product> productResponse = await _productService.GetProduct(id);
+            if (productResponse.Status == MusicShop.Domain.Enum.StatusCode.OK)
             {
-                return View(response.Data);
+                DataBaseResponse<List<Comment>> commentResponse = 
+                    await _commentService.GetAll(productResponse.Data.Id);
+                data.Product = productResponse.Data;
+                data.Comments = commentResponse.Data;
+                return View(data);
             }
             return RedirectToAction("Error");
         }
