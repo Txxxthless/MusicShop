@@ -1,11 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using MusicShop.DAL;
-using MusicShop.DAL.Interfaces;
-using MusicShop.DAL.Repositories;
-using MusicShop.Domain.Entity;
-using MusicShop.Service.Interfaces;
-using MusicShop.Service.Services;
 using MusicShopApplication;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("AzureDataBase");
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -23,7 +18,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     });
 
 //db register
-builder.Services.AddDbContext<ApplicationDataBaseContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ApplicationDataBaseContext>(options =>
+{
+    options.UseSqlServer(connectionString);
+});
 builder.Services.ConfigureRepositories();
 builder.Services.ConfigureServices();
 
