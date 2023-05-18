@@ -10,3 +10,7 @@ Here is a brief preview of the application.
 ![alt text](https://i.imgur.com/TsKPPnf.png)
 ## 4. Some product page:
 ![alt text](https://i.imgur.com/tLnUHZ8.png)
+## 5. Basket page:
+![alt text](https://i.imgur.com/02RWPSZ.png)
+## 6. Adding product (for Admin only): 
+![alt text](https://i.imgur.com/BpE6PDj.png)
