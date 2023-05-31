@@ -1,0 +1,25 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('https://i.imgur.com/do5QZOW.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.headerButton {
+    font-size: 170%;
+}

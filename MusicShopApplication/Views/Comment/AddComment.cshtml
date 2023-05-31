@@ -1,0 +1,18 @@
+﻿@using MusicShop.Domain.Entity
+@model Comment
+@{
+    ViewData["Title"] = "AddComment";
+}
+
+<div class="card text-black" style="border-radius : 25px; height: contain; padding-bottom: 50px;">
+    <p class="text-center h1 mb-5 mt-4">Leave your comment</p>
+    <form asp-controller="Comment" asp-action="AddComment" style="padding-left: 100px; padding-right: 100px">
+        <div class="form-outline flex-fill mb-0">
+            <input asp-for="Text" autocomplete="off" type="text" class="form-control" />
+        </div>
+        <input hidden asp-for="ProductId" value=@Model.ProductId />
+        <input hidden asp-for="UserName" value=@Model.UserName />
+        <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 50px;">Leave comment!</button>
+    </form>
+</div>
+

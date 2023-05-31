@@ -1,0 +1,14 @@
+D:\CS Projects\MusicShop\MusicShop.Domain\bin\Release\net6.0\MusicShop.Domain.deps.json
+D:\CS Projects\MusicShop\MusicShop.Domain\bin\Release\net6.0\MusicShop.Domain.runtimeconfig.json
+D:\CS Projects\MusicShop\MusicShop.Domain\bin\Release\net6.0\MusicShop.Domain.dll
+D:\CS Projects\MusicShop\MusicShop.Domain\bin\Release\net6.0\MusicShop.Domain.pdb
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.csproj.AssemblyReference.cache
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.AssemblyInfoInputs.cache
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.AssemblyInfo.cs
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.csproj.CoreCompileInputs.cache
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.dll
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\refint\MusicShop.Domain.dll
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.pdb
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\MusicShop.Domain.genruntimeconfig.cache
+D:\CS Projects\MusicShop\MusicShop.Domain\obj\Release\net6.0\ref\MusicShop.Domain.dll

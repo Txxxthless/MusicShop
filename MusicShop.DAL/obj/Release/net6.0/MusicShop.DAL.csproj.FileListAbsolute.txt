@@ -1,0 +1,17 @@
+D:\CS Projects\MusicShop\MusicShop.DAL\bin\Release\net6.0\MusicShop.DAL.deps.json
+D:\CS Projects\MusicShop\MusicShop.DAL\bin\Release\net6.0\MusicShop.DAL.runtimeconfig.json
+D:\CS Projects\MusicShop\MusicShop.DAL\bin\Release\net6.0\MusicShop.DAL.dll
+D:\CS Projects\MusicShop\MusicShop.DAL\bin\Release\net6.0\MusicShop.DAL.pdb
+D:\CS Projects\MusicShop\MusicShop.DAL\bin\Release\net6.0\MusicShop.Domain.dll
+D:\CS Projects\MusicShop\MusicShop.DAL\bin\Release\net6.0\MusicShop.Domain.pdb
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.csproj.AssemblyReference.cache
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.AssemblyInfoInputs.cache
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.AssemblyInfo.cs
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.csproj.CoreCompileInputs.cache
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.csproj.CopyComplete
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.dll
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\refint\MusicShop.DAL.dll
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.pdb
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\MusicShop.DAL.genruntimeconfig.cache
+D:\CS Projects\MusicShop\MusicShop.DAL\obj\Release\net6.0\ref\MusicShop.DAL.dll
