@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
@@ -52,3 +53,59 @@ Global
 		SolutionGuid = {447E5962-0E1A-4A7A-A6F1-0879C7457A7F}
 	EndGlobalSection
 EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicShopApplication", "MusicShopApplication.csproj", "{9969AA17-D022-47BB-BEB8-0C9F5B8BC812}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B72D82B7-4D2E-4396-9A28-ECF05B8D0022}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{028B401A-237C-4FC9-A29C-9F1DDA77D819}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{E9F61934-0367-4B39-8228-C68C0DB2F3F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicShop.Domain", "..\MusicShop.Domain\MusicShop.Domain.csproj", "{A1855550-B0EF-4482-86D1-AAE8B35CC0E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicShop.DAL", "..\MusicShop.DAL\MusicShop.DAL.csproj", "{7700FC00-06F5-4DE2-B872-03DD71E101A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicShop.Service", "..\MusicShop.Service\MusicShop.Service.csproj", "{86C76C28-154A-4576-A924-589607A27152}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9969AA17-D022-47BB-BEB8-0C9F5B8BC812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9969AA17-D022-47BB-BEB8-0C9F5B8BC812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9969AA17-D022-47BB-BEB8-0C9F5B8BC812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9969AA17-D022-47BB-BEB8-0C9F5B8BC812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1855550-B0EF-4482-86D1-AAE8B35CC0E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1855550-B0EF-4482-86D1-AAE8B35CC0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1855550-B0EF-4482-86D1-AAE8B35CC0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1855550-B0EF-4482-86D1-AAE8B35CC0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7700FC00-06F5-4DE2-B872-03DD71E101A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7700FC00-06F5-4DE2-B872-03DD71E101A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7700FC00-06F5-4DE2-B872-03DD71E101A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7700FC00-06F5-4DE2-B872-03DD71E101A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C76C28-154A-4576-A924-589607A27152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C76C28-154A-4576-A924-589607A27152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C76C28-154A-4576-A924-589607A27152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C76C28-154A-4576-A924-589607A27152}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1855550-B0EF-4482-86D1-AAE8B35CC0E8} = {B72D82B7-4D2E-4396-9A28-ECF05B8D0022}
+		{7700FC00-06F5-4DE2-B872-03DD71E101A2} = {028B401A-237C-4FC9-A29C-9F1DDA77D819}
+		{86C76C28-154A-4576-A924-589607A27152} = {E9F61934-0367-4B39-8228-C68C0DB2F3F1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {447E5962-0E1A-4A7A-A6F1-0879C7457A7F}
+	EndGlobalSection
+EndGlobal
+>>>>>>> af62f584d277b5fbe75b59c07e356b9ea25a83f0

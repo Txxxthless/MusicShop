@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@using MusicShop.Domain.Entity
 @model List<Product>
 
@@ -40,3 +41,47 @@
     }
 </div>
 
+=======
+﻿@using MusicShop.Domain.Entity
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Search results";
+}
+
+<div class="card text-black" style="border-radius : 25px; height: contain; padding: 50px;">
+    <h1>Search results</h1>
+    @if (Model.Count != 0)
+    {
+        <div class="card text-black" style="border-radius : 25px; height: contain; padding: 50px;">
+            <div class="container">
+                @{
+                    foreach (Product product in Model)
+                    {
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(product.Image)" style="width: 400px; height: 400px;" />
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <h2>@product.Manufacturer</h2>
+                                <p>@product.Model</p>
+                                <a asp-controller="Products" asp-action="Product" asp-route-id="@product.Id" class="btn btn-primary btn-lg;" style="width: 100%;">See more</a>
+                                <form asp-controller="Order" asp-action="CreateOrder" asp-route-id="@product.Id">
+                                    <button class="btn btn-primary btn-lg;" type="submit" style="width: 100%; margin-top: 15px;">Add to cart</button>
+                                </form>
+                            </div>
+                        </div>
+                        <hr />
+                    }
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <h2>Nothing found</h2>
+        <p>You have probably entered something wrong. Try entering another request.</p>
+    }
+</div>
+
+>>>>>>> af62f584d277b5fbe75b59c07e356b9ea25a83f0
