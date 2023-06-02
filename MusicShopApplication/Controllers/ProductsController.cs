@@ -78,7 +78,8 @@ namespace MusicShopApplication.Controllers
         [HttpGet]
         public async Task<IActionResult> Accessories()
         {
-            DataBaseResponse<List<Product>> response = await _productService.GetProductsByType(MusicShop.Domain.Enum.InstrumentType.Accessory);
+            DataBaseResponse<List<Product>> response = await _productService.GetProductsByType(
+                MusicShop.Domain.Enum.InstrumentType.Accessory);
             if (response.Status == MusicShop.Domain.Enum.StatusCode.OK)
             {
                 return View(response.Data);
